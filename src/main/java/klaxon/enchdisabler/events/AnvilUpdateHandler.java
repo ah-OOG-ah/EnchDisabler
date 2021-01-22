@@ -25,9 +25,10 @@ public class AnvilUpdateHandler {
 
             if (enchantment.getAsJsonObject().get("id").toString().equals(banned)) {
                 //event.setCanceled(true);
-                event.setResult(Event.Result.DENY);
+                //event.setResult(Event.Result.DENY);
                 event.setOutput(ItemStack.EMPTY);
-                event.setCost(Integer.MAX_VALUE);
+                event.setCost(0);
+                return;
             }
         }
         for (INBT nbt : right.getEnchantmentTagList()) {
@@ -35,9 +36,10 @@ public class AnvilUpdateHandler {
 
             if (enchantment.getAsJsonObject().get("id").toString().equals(banned)) {
                 //event.setCanceled(true);
-                event.setResult(Event.Result.DENY);
+                //event.setResult(Event.Result.DENY);
                 event.setOutput(ItemStack.EMPTY);
-                event.setCost(Integer.MAX_VALUE);
+                event.setCost(0);
+                return;
             }
         }
     }
